@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directions From Dad</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <header>
+        <img src="./Assets/headerImg1.jpg" alt="lost cartoon character" class="reversedImg">
+        <h1>Directions From Dad</h1>
+        <img src="./Assets/headerImg1.jpg" alt="lost cartoon character" >
+    </header>
+
+    <!-- Should this <main> here here? -->
+    <main class="wrapper">
+        <section class = "howToPlay">
+            <h2>How To Play</h2>
+            <p>You will be given a starting cardinal direction. You will then be given a list of left or right turns. All you need to do is tell us which direction you are facing after following the directions. You have 10 seconds per question!</p>
+            <h2>Example:</h2>
+            <div class="startingDirection"></div>
+            <div class="turns"></div>
+            <form action="post">
+                <fieldset>
+                    <input type="radio" name="answer" value="north" id="north">
+                    <label for="north">North</label>
+
+                    <input type="radio" name="answer" value="east" id="east">
+                    <label for="east">East</label>
+
+                    <input type="radio" name="answer" value="south" id="south">
+                    <label for="south">South</label>
+
+                    <input type="radio" name="answer" value="west" id="west">
+                    <label for="west">West</label>
+                </fieldset>
+            </form>
+            <p>In this example you would first turn left and be facing West. Then after turning right you would be facing North again. After your second right turn you would be facing East. This is the correct answer!</p>
+        </section>
+        <button>PLAY</button>
+    </main>
+
+</body>
+</html>

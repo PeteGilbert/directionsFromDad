@@ -1,0 +1,20 @@
+// Header Styling
+body {
+    background-color: #79c7d4;
+}
+header {
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    display: inline;
+    text-align: center;
+    color: white;
+    font-size: 4rem;
+}
+
+.reversedImg {
+    transform: scaleX(-1);
+}

@@ -1,0 +1,20 @@
+@media(max-width:900px) {
+    fieldset {
+        flex-wrap: wrap;
+    }
+    
+    .inputPair {
+        width: calc(50% - 40px);
+        margin: 20px;
+    }
+
+    h1 {
+        font-size: 5vw;
+    }
+}
+
+@media (max-width:600px) {
+    .angryDadDiv {
+        display:none;
+    }
+}

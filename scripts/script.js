@@ -3,17 +3,11 @@ $(document).ready(function(){
     // level will track number of turns
     let level = 1;
     let timer = 60;
-    $(".play").on("click", function(){
-        //Removing Instructions Section
-        $(".howToPlay").remove();
-        //Showing Game Section
-        $(".game").toggleClass("hidden");
-        
-        
-        //RESETING DEFAULT VALUES
+
+    const reset = function(startingTime){
         countdownFunction()
         level = 1;
-        timer = 60;
+        timer = startingTime;
         $(".turns").html("")
         startingValue = createStartingValue()
         startingDirection = translateToDirection(startingValue);
@@ -23,6 +17,17 @@ $(document).ready(function(){
         $(".gameOver").addClass("hidden");
         $('.time').html(`${timer}`);
         document.getElementById("backgroundMusic").play();
+    }
+
+    $(".play").on("click", function(){
+        //Removing Instructions Section
+        $(".howToPlay").remove();
+        //Showing Game Section
+        $(".game").toggleClass("hidden");
+        
+        
+        //RESETING DEFAULT VALUES
+        reset(60);
     })
 
     // This function creates a random number between 400-403 to represent starting direction. Starting at 400 to prevent negative numbers while being divisable by 4 for the translate to direction function later.
@@ -83,11 +88,11 @@ $(document).ready(function(){
         if (answer == userAnswer){
             level++
             document.getElementById("correct").play();
-            $(".dadYelling").html("   duh!")
+            $(".dadYelling").html("duh!")
         }else {
+            timer = timer - 5
             document.getElementById("incorrect").play();
             $(".dadYelling").html(`It was ${translateToDirection(answer)}...`)
-            timer = timer - 5
         }
         // Clears turns and re-randomizes
         $(".turns").html("")
@@ -119,7 +124,6 @@ $(document).ready(function(){
             if (timer <= 0) {
                 clearInterval(countdown)
                 gameOver(level);
-                
             }
         }, 1000)
     }

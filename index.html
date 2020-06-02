@@ -32,19 +32,27 @@
                     <div class="startingDirection">North</div>
                     <div class="turns"></div>
                     <form>
-                        <fieldset>
+                        <fieldset class="flex">
                             <legend align="center">Which direction are you facing now?</legend>
-                            <input type="radio" name="answer" value="0" id="north">
-                            <label for="north">North</label>
+                            <div class="inputPair">
+                                <input type="radio" name="answer" value="0" id="north">
+                                <label for="north">North</label>
+                            </div>
 
-                            <input type="radio" name="answer" value="1" id="east">
-                            <label for="east">East</label>
+                            <div class="inputPair">
+                                <input type="radio" name="answer" value="1" id="east">
+                                <label for="east">East</label>
+                            </div>
 
-                            <input type="radio" name="answer" value="2" id="south">
-                            <label for="south">South</label>
+                            <div class="inputPair">
+                                <input type="radio" name="answer" value="2" id="south">
+                                <label for="south">South</label>
+                            </div>  
 
-                            <input type="radio" name="answer" value="3" id="west">
-                            <label for="west">West</label>
+                            <div class="inputPair">
+                                <input type="radio" name="answer" value="3" id="west">
+                                <label for="west">West</label>
+                            </div>
                         </fieldset>
                     </form>
                     <!-- Submit Button outside of form as default behaviour not necessary -->
@@ -63,6 +71,9 @@
             <audio id="correct" src="./Assets/correct.wav" autoplay="false" ></audio>
             <audio id="backgroundMusic" src="./Assets/backgroundMusic.mp3" autoplay="false" ></audio>
             <audio id="gameOver" src="./Assets/gameOver.wav" autoplay="false" ></audio>
+        </section>
+        <section class="settings hidden">
+            <!-- starting time, music,  -->
         </section>
 
         <section class="gameOver hidden">

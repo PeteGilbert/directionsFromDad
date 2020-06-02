@@ -59,24 +59,22 @@ button {
 }
 
 .angryDad {
-    width: 20vw;
+    width: 250px;
 }
 
 .angryDadDiv{
     position: relative;
 }
 
-.dadYellingStatic{
+.dadYelling{
     position: absolute;
-    top: 2.8vw;
-    left: 5.8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 25px;
+    left: 20px;
     transform: rotate(-17deg);
-}
-
-.dadYellingDynamic{
-    position: absolute;
-    top: 1.5vw;
-    left: 4.5vw;
-    transform: rotate(-17deg);
-    text-align:center;
+    width: 150px;
+    margin: 0;
+    text-align: center;
 }

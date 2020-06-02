@@ -83,9 +83,11 @@ $(document).ready(function(){
         if (answer == userAnswer){
             level++
             document.getElementById("correct").play();
+            $(".dadYelling").html("   duh!")
         }else {
             document.getElementById("incorrect").play();
-            $(".dadYellingDynamic").html(`${translateToDirection(answer)}...`)
+            $(".dadYelling").html(`It was ${translateToDirection(answer)}...`)
+            timer = timer - 5
         }
         // Clears turns and re-randomizes
         $(".turns").html("")

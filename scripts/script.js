@@ -83,10 +83,9 @@ $(document).ready(function(){
         if (answer == userAnswer){
             level++
             document.getElementById("correct").play();
-            console.log("correct")
         }else {
             document.getElementById("incorrect").play();
-            console.log("incorrect")
+            $(".dadYellingDynamic").html(`${translateToDirection(answer)}...`)
         }
         // Clears turns and re-randomizes
         $(".turns").html("")

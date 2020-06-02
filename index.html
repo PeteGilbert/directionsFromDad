@@ -27,32 +27,42 @@
         </section>
         
         <section class="game hidden">
+            <div class="flex">
+                <div class="gameContent">
+                    <div class="startingDirection">North</div>
+                    <div class="turns"></div>
+                    <form>
+                        <fieldset>
+                            <legend align="center">Which direction are you facing now?</legend>
+                            <input type="radio" name="answer" value="0" id="north">
+                            <label for="north">North</label>
 
-            <div class="startingDirection">North</div>
-            <div class="turns"></div>
-            <form>
-                <fieldset>
-                    <legend align="center">Which direction are you facing now?</legend>
-                    <input type="radio" name="answer" value="0" id="north">
-                    <label for="north">North</label>
+                            <input type="radio" name="answer" value="1" id="east">
+                            <label for="east">East</label>
 
-                    <input type="radio" name="answer" value="1" id="east">
-                    <label for="east">East</label>
+                            <input type="radio" name="answer" value="2" id="south">
+                            <label for="south">South</label>
 
-                    <input type="radio" name="answer" value="2" id="south">
-                    <label for="south">South</label>
-
-                    <input type="radio" name="answer" value="3" id="west">
-                    <label for="west">West</label>
-                </fieldset>
-            </form>
-                <!-- Submit Button outside of form as default behaviour not necessary -->
-                <button class="submit">Submit</button>
-                <h3 class="time"></h3>
-                <audio id="incorrect" src="./Assets/incorrect.wav" autoplay="false" ></audio>
-                <audio id="correct" src="./Assets/correct.wav" autoplay="false" ></audio>
-                <audio id="backgroundMusic" src="./Assets/backgroundMusic.mp3" autoplay="false" ></audio>
-                <audio id="gameOver" src="./Assets/gameOver.wav" autoplay="false" ></audio>
+                            <input type="radio" name="answer" value="3" id="west">
+                            <label for="west">West</label>
+                        </fieldset>
+                    </form>
+                    <!-- Submit Button outside of form as default behaviour not necessary -->
+                    <button class="submit">Submit</button>
+                    <h3 class="time"></h3>
+                </div>
+                <div class="angryDadDiv">
+                    <img src="./Assets/angryDad.png" alt="An Angry Dad Yelling" class = "angryDad">
+                    <p class= "dadYellingDynamic"></p>
+                    <p class= "dadYellingStatic">Duh!</p>
+                </div>
+                
+            </div>
+                
+            <audio id="incorrect" src="./Assets/incorrect.wav" autoplay="false" ></audio>
+            <audio id="correct" src="./Assets/correct.wav" autoplay="false" ></audio>
+            <audio id="backgroundMusic" src="./Assets/backgroundMusic.mp3" autoplay="false" ></audio>
+            <audio id="gameOver" src="./Assets/gameOver.wav" autoplay="false" ></audio>
         </section>
 
         <section class="gameOver hidden">

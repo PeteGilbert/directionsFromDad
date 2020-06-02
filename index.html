@@ -20,27 +20,50 @@
             <h2>How To Play</h2>
             <p>You will be given a starting cardinal direction. You will then be given a list of left or right turns. All you need to do is tell us which direction you are facing after following the directions. You have 10 seconds per question!</p>
             <h2>Example:</h2>
-            <div class="startingDirection"></div>
+            <div class="startingDirection">North</div>
+            <div class="turns">Left Right Right</div>
+            <p>In this example you would first turn left and be facing West. Then after turning right you would be facing North again. After your second right turn you would be facing <span class="exampleAns">East.</span> This is the correct answer!</p>
+            <button class="play">Play</button>
+        </section>
+        
+        <section class="game hidden">
+
+            <div class="startingDirection">North</div>
             <div class="turns"></div>
             <form action="post">
                 <fieldset>
-                    <input type="radio" name="answer" value="north" id="north">
+                    <legend align="center">Which direction are you facing now?</legend>
+                    <input type="radio" name="answer" value="0" id="north">
                     <label for="north">North</label>
 
-                    <input type="radio" name="answer" value="east" id="east">
+                    <input type="radio" name="answer" value="1" id="east">
                     <label for="east">East</label>
 
-                    <input type="radio" name="answer" value="south" id="south">
+                    <input type="radio" name="answer" value="2" id="south">
                     <label for="south">South</label>
 
-                    <input type="radio" name="answer" value="west" id="west">
+                    <input type="radio" name="answer" value="3" id="west">
                     <label for="west">West</label>
                 </fieldset>
             </form>
-            <p>In this example you would first turn left and be facing West. Then after turning right you would be facing North again. After your second right turn you would be facing East. This is the correct answer!</p>
+                <!-- Submit Button outside of form as default behaviour not necessary -->
+                <button class="submit">Submit</button>
+                <h3 class="time"></h3>
+                <audio id="incorrect" src="./Assets/incorrect.wav" autoplay="false" ></audio>
+                <audio id="correct" src="./Assets/correct.wav" autoplay="false" ></audio>
+                <audio id="backgroundMusic" src="./Assets/backgroundMusic.mp3" autoplay="false" ></audio>
+                <audio id="gameOver" src="./Assets/gameOver.wav" autoplay="false" ></audio>
         </section>
-        <button>PLAY</button>
+
+        <section class="gameOver hidden">
+            <h2>Great Job! Your score is:</h2>
+            <h2 class="score"></h2>
+            <button class="play">Play Again?</button>
+        </section>
+
     </main>
+    <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+    <script src ="./scripts/script.js"></script>
 
 </body>
 </html>

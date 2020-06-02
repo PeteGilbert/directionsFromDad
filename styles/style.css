@@ -308,3 +308,7 @@ button {
 .hidden {
   display: none;
 }
+
+.submit {
+  margin-top: 20px;
+}

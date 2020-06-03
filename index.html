@@ -24,6 +24,7 @@
             <div class="turns">Left Right Right</div>
             <p>In this example you would first turn left and be facing West. Then after turning right you would be facing North again. After your second right turn you would be facing <span class="exampleAns">East.</span> This is the correct answer!</p>
             <button class="play">Play</button>
+            <button class="settingsButton">Settings</button>
         </section>
         
         <section class="game hidden">
@@ -67,19 +68,30 @@
                 
             </div>
                 
-            <audio id="incorrect" src="./Assets/incorrect.wav" autoplay="false" ></audio>
-            <audio id="correct" src="./Assets/correct.wav" autoplay="false" ></audio>
-            <audio id="backgroundMusic" src="./Assets/backgroundMusic.mp3" autoplay="false" ></audio>
-            <audio id="gameOver" src="./Assets/gameOver.wav" autoplay="false" ></audio>
+            <audio id="incorrect" src="./Assets/incorrect.wav" autoplay="false" class="audio"></audio>
+            <audio id="correct" src="./Assets/correct.wav" autoplay="false" class="audio"></audio>
+            <audio id="backgroundMusic" src="./Assets/backgroundMusic.mp3" autoplay="false" class="audio"></audio>
+            <audio id="gameOver" src="./Assets/gameOver.wav" autoplay="false" class="audio"></audio>
         </section>
-        <section class="settings hidden">
-            <!-- starting time, music,  -->
+        <section class="settings hidden flex">
+            <form>
+                <div class="inputPair">
+                    <input type="range" name="volume" id="volume">
+                    <label for="volume">Volume</label>
+                </div>
+                <div class="inputPair">
+                    <input type="number" name="gameLength" id="gameLength" value="60" class="gameLength">
+                    <label for="gameLength">Game Length (secs)</label>
+                </div>
+            </form>
+            <button class="play">Play</button>
         </section>
 
         <section class="gameOver hidden">
             <h2>Great Job! Your score is:</h2>
             <h2 class="score"></h2>
             <button class="play">Play Again?</button>
+            <button class="settingsButton">Settings</button>
         </section>
 
     </main>

@@ -21,11 +21,11 @@
     }
 
     //This is a timer function it counts down every second and runs gameOver function when finished
-    $(".time").html(`${timer}`);
+    $(".time").html(timer);
     const countdownFunction = function(){
         const countdown = setInterval(() => {
             timer--;
-            $('.time').html(`${timer}`);
+            $('.time').html(timer);
             if (timer <= 0) {
                 clearInterval(countdown)
                 gameOver(level);
@@ -93,6 +93,13 @@
         document.getElementById("backgroundMusic").pause();
         document.getElementById("gameOver").play();
         $(".gameOver").removeClass("hidden")
+        if (score >= 10) {
+            $(".gameOverText").html("Your score is:");
+            $(".gameOverText2").html("...Acceptable");
+        } else {
+            $(".gameOverText").html("Really... Your score is only:");
+            $(".gameOverText2").html("Disappointing");
+        }
     }
 
 
@@ -111,7 +118,6 @@ $(document).ready(function(){
         document.getElementById("incorrect").volume = userVolume 
         document.getElementById("correct").volume = userVolume
         document.getElementById("backgroundMusic").volume = userVolume
-        console.log(userVolume) 
     })
 
     $(".submit").on("click", function(){

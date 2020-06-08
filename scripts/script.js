@@ -8,8 +8,9 @@
         countdownFunction()
         level = 1;
         timer = $('input[name=gameLength]').val();
-        $(".turns").html("")
-        startingValue = createStartingValue()
+        userVolume = $('input[name=volume]').val() / 100;
+        $(".turns").html("");
+        startingValue = createStartingValue();
         startingDirection = translateToDirection(startingValue);
         $(".startingDirection").html(startingDirection);
         turnValue = createTurns(level);
@@ -140,8 +141,8 @@ $(document).ready(function(){
         turnValue = createTurns(level);
         answer = findAnswer(startingValue, turnValue);
 
-        //THIS IS LEFT IN SO THAT WE CAN CHEAT AS THE GAME IS ACTUALLY QUITE DIFFICULT!
-        console.log(`Cheater's answer: ${translateToDirection(answer)}`);
+        //THIS IS LEFT IN SO THAT WE CAN CHEAT AS THE GAME IS ACTUALLY QUITE DIFFICULT! I'VE COMMENTED IT OUT FOR GRADING PURPOSES, FEEL FREE TO UNCOMMENT!
+        //console.log(`Cheater's answer: ${translateToDirection(answer)}`);
     })
 
     $(".settingsButton").on("click", function(){
